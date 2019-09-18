@@ -1,0 +1,60 @@
+{
+  "source": ["properties/**/*.json"],
+  "platforms": {
+    "android": {
+      "transforms": [
+        "attribute/cti",
+        "name/cti/snake",
+        "color/hex8android",
+        "size/sp",
+        "size/dp"
+      ],
+      "buildPath": "tokens/src/main/res/values/",
+      "files": [
+        {
+          "destination": "font_dimens.xml",
+          "format": "android/fontDimens"
+        },
+        {
+          "destination": "colors.xml",
+          "format": "android/colors"
+        }
+      ]
+    },
+    "ios": {
+      "transforms": [
+        "attribute/cti",
+        "custom/name/ti/camel",
+        "color/hex8",
+        "custom/size/number",
+        "content/objC/literal",
+        "asset/objC/literal",
+        "font/objC/literal"
+      ],
+      "buildPath": "build/ios/",
+      "files": [
+        {
+          "destination": "TokensColors.json",
+          "format": "json/flat",
+          "type": "TokensColorName",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        },
+        {
+          "destination": "TokensDimensions.json",
+          "format": "json/flat",
+          "className": "TokensDimensions",
+          "type": "float",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
