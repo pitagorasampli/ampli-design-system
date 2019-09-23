@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
+BUILD_PATH=build
 SVG_PATH=assets/images/svg
-PNG_PATH=build/assets/images/png
+PNG_PATH=$BUILD_PATH/assets/images/png
 VECTOR_PATH=tokens/src/main/res/drawable
 
 svgexport() {
@@ -39,10 +40,15 @@ svgo() {
   npx svgo -f ${SVG_PATH}
 }
 
+copy_svg() {
+  cp -rf $SVG_PATH $BUILD_PATH/$SVG_PATH
+}
+
 build_svg() {
   svgo
   svg2png
   svg2vector
+  copy_svg
 }
 
 main() {

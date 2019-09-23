@@ -1,6 +1,19 @@
 {
   "source": ["properties/**/*.json"],
   "platforms": {
+    "js": {
+      "transforms": ["attribute/cti", "name/cti/pascal", "color/css"],
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "destination": "index.js",
+          "format": "javascript/es6"
+        }
+      ],
+      "options": {
+        "showFileHeader": false
+      }
+    },
     "android": {
       "transforms": [
         "attribute/cti",
@@ -19,7 +32,10 @@
           "destination": "colors.xml",
           "format": "android/colors"
         }
-      ]
+      ],
+      "options": {
+        "showFileHeader": false
+      }
     },
     "ios": {
       "transforms": [
@@ -54,7 +70,10 @@
             }
           }
         }
-      ]
+      ],
+      "options": {
+        "showFileHeader": false
+      }
     }
   }
 }
