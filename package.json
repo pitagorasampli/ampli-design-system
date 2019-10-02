@@ -2,7 +2,7 @@
   "name": "@pitagoras-digital/tokens",
   "version": "0.0.1",
   "description": "Design System.",
-  "main": "index.js",
+  "main": "build/js/index.js",
   "engines": {
     "node": ">=10"
   },
