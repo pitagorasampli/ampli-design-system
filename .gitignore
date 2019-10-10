@@ -5,13 +5,17 @@
 !build/**/*
 !build/**/.*
 
+!gradle/
+!gradle/**/*
+!gradle/**/.*
+
 !tokens/
 !tokens/**/*
 !tokens/**/.*
 
-!gradle/
-!gradle/**/*
-!gradle/**/.*
+!scripts/
+!scripts/**/*
+!scripts/**/.*
 
 !.gitignore
 !build.gradle
