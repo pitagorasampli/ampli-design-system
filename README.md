@@ -1,17 +1,23 @@
 # Design System
 
-## Build pipeline
+## Serve docs
 
 ```sh
-git fetch --all
-git checkout release
-git pull
-git checkout master -- assets properties scripts config.json index.js
-git reset HEAD .
-git checkout master -- package.json package-lock.json
-npm install
-npm run build
-git add .
-git commit -am "New build message"
-git push origin release
+npm run serve:docs
 ```
+
+_See: http://localhost:4000_
+
+## Build tokens
+
+```sh
+npm run build
+```
+
+## Jenkins pipeline
+
+```sh
+npm version <version_number | major | minor | patch> -m "New release %s"
+```
+
+_The version hook scripts will make the job._

@@ -9,7 +9,11 @@
   "scripts": {
     "build": "npm run build:tokens && npm run build:assets",
     "build:tokens": "node index.js",
-    "build:assets": "bash scripts/build_assets.sh"
+    "build:assets": "bash scripts/build_assets.sh",
+    "serve:docs": "serve -n -s -l ${PORT:-4000} docs",
+    "preversion": "bash scripts/preversion_hook.sh",
+    "version": "bash scripts/version_hook.sh",
+    "postversion": "bash scripts/postversion_hook.sh"
   },
   "author": "Dev Team @ Pitágoras Digital",
   "license": "SEE LICENSE IN LICENSE",
@@ -19,5 +23,8 @@
     "svg2vectordrawable": "^2.6.16",
     "svgexport": "^0.3.2",
     "svgo": "^1.3.0"
+  },
+  "dependencies": {
+    "serve": "^11.2.0"
   }
 }
