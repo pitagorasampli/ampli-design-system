@@ -1,7 +1,7 @@
 {
-  "name": "@pitagoras-digital/tokens",
+  "name": "@ampli/tokens",
   "version": "0.0.1",
-  "description": "Design System.",
+  "description": "Design System - Pitágoras Ampli.",
   "main": "build/js/index.js",
   "engines": {
     "node": ">=10"
@@ -15,7 +15,7 @@
     "version": "bash scripts/version_hook.sh",
     "postversion": "bash scripts/postversion_hook.sh"
   },
-  "author": "Dev Team @ Pitágoras Digital",
+  "author": "Dev Team @ Pitágoras Ampli",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "lodash": "^4.17.15",
