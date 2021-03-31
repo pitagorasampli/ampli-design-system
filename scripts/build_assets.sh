@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
 BUILD_PATH=build
-SVG_PATH=assets/images/svg
-PNG_PATH=$BUILD_PATH/assets/images/png
+ASSETS_SVG_PATH=assets/images/svg
+BUILD_PNG_PATH=$BUILD_PATH/assets/images/png
 VECTOR_PATH=tokens/src/main/res/drawable
 
 svgexport() {
@@ -14,15 +14,13 @@ svgexport() {
   echo ${@}
 
   npx svgexport \
-    "${SVG_PATH}/${image}" \
-    "${PNG_PATH}/${image%.*}${imageSize}.png" \
+    "${ASSETS_SVG_PATH}/${image}" \
+    "${BUILD_PNG_PATH}/${image%.*}${imageSize}.png" \
     "${size}"
 }
 
 svg2png() {
-  rm -rf ${PNG_PATH}
-
-  find ${SVG_PATH} -name '*.svg' | \
+  find ${ASSETS_SVG_PATH} -name '*.svg' | \
     while read file; do \
       svgexport $file 2x; \
       svgexport $file 4x @2x; \
@@ -31,20 +29,31 @@ svg2png() {
 }
 
 svg2vector() {
-  rm -rf ${VECTOR_PATH}
-
-  npx s2v -f ${SVG_PATH} -o ${VECTOR_PATH}
+  npx s2v -f ${ASSETS_SVG_PATH} -o ${VECTOR_PATH}
 }
 
 svgo() {
-  npx svgo -f ${SVG_PATH}
+  npx svgo -f ${ASSETS_SVG_PATH}
 }
 
 copy_svg() {
-  cp -rf $SVG_PATH $BUILD_PATH/$SVG_PATH
+  cp -rf $ASSETS_SVG_PATH $BUILD_PATH/$ASSETS_SVG_PATH
+}
+
+clean_build() {
+  rm -rf ${BUILD_PATH}
+  rm -rf ${VECTOR_PATH}
+}
+
+create_directories() {
+  mkdir -p ${BUILD_PATH}
+  mkdir -p ${BUILD_PNG_PATH}
+  mkdir -p ${VECTOR_PATH}
 }
 
 build_svg() {
+  clean_build
+  create_directories
   svgo
   svg2png
   svg2vector
