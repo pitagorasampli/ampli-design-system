@@ -13,6 +13,16 @@ StyleDictionary.registerTransform({
 });
 
 StyleDictionary.registerTransform({
+  name: 'custom/category/lowercase',
+  type: 'attribute',
+  transformer: (prop) => {
+    prop.attributes.category = prop.attributes.category.toLowerCase();
+    return prop;
+  }
+});
+
+
+StyleDictionary.registerTransform({
   name: 'custom/size/number',
   type: 'value',
   matcher: isSize,
