@@ -1,9 +1,11 @@
 #!/bin/bash -e
 
-BUILD_PATH=build
-ASSETS_SVG_PATH=assets/images/svg
-BUILD_PNG_PATH=$BUILD_PATH/assets/images/png
 VECTOR_PATH=tokens/src/main/res/drawable
+ASSETS_SVG_PATH=assets/images/svg
+BUILD_PATH=build
+BUILD_ASSETS_PATH=$BUILD_PATH/assets
+BUILD_PNG_PATH=$BUILD_ASSETS_PATH/images/png
+BUILD_SVG_PATH=$BUILD_ASSETS_PATH/images/svg
 
 svgexport() {
   image=$(basename ${1})
@@ -37,16 +39,15 @@ svgo() {
 }
 
 copy_svg() {
-  cp -rf $ASSETS_SVG_PATH $BUILD_PATH/$ASSETS_SVG_PATH
+  cp -rf $ASSETS_SVG_PATH $BUILD_SVG_PATH
 }
 
 clean_build() {
-  rm -rf ${BUILD_PATH}
+  rm -rf ${BUILD_ASSETS_PATH}
   rm -rf ${VECTOR_PATH}
 }
 
 create_directories() {
-  mkdir -p ${BUILD_PATH}
   mkdir -p ${BUILD_PNG_PATH}
   mkdir -p ${VECTOR_PATH}
 }
