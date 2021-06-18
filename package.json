@@ -7,13 +7,14 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "npm run build:tokens && npm run build:assets",
+    "build": "npm run download:tokens && npm run build:tokens && npm run build:assets",
     "build:tokens": "node index.js",
     "build:assets": "bash scripts/build_assets.sh",
     "serve:docs": "serve -n -s -l ${PORT:-4000} docs",
     "preversion": "bash scripts/preversion_hook.sh",
     "version": "bash scripts/version_hook.sh",
-    "postversion": "bash scripts/postversion_hook.sh"
+    "postversion": "bash scripts/postversion_hook.sh",
+    "download:tokens": "bash scripts/downloadtokens_hook.sh"
   },
   "author": "Dev Team @ Pitágoras Ampli",
   "license": "SEE LICENSE IN LICENSE",
