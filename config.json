@@ -20,7 +20,8 @@
         "name/cti/snake",
         "color/hex8android",
         "size/sp",
-        "size/dp"
+        "size/dp",
+        "custom/category/lowercase"
       ],
       "buildPath": "tokens/src/main/res/values/",
       "files": [
@@ -55,7 +56,7 @@
           "type": "TokensColorName",
           "filter": {
             "attributes": {
-              "category": "color"
+              "category": "Color"
             }
           }
         },
