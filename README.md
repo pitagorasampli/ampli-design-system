@@ -9,9 +9,17 @@ npm run serve:docs
 _See: http://localhost:4000_
 
 ## Build tokens
+Get ZeroHeight Tokens URL with product design team.
 
 ```sh
-npm run build
+ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url> npm run build
+```
+
+## Download tokens locally
+Get ZeroHeight Tokens URL with product design team.
+
+```sh
+ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url> npm run download:tokens
 ```
 
 ## Jenkins pipeline
