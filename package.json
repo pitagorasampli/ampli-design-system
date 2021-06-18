@@ -1,6 +1,6 @@
 {
   "name": "@ampli/tokens",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Design System - Pitágoras Ampli.",
   "main": "build/js/index.js",
   "engines": {
