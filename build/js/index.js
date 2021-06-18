@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 18 Jun 2021 12:56:42 GMT
+ * Generated on Fri, 18 Jun 2021 13:49:44 GMT
  */
 
 export const DegreeGradientBase = "250";
