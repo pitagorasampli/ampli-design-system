@@ -14,6 +14,13 @@ _See: http://localhost:4000_
 npm run build
 ```
 
+## Download tokens locally
+Get ZeroHeight URL with product design team.
+
+```sh
+ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url> npm run download:tokens
+```
+
 ## Jenkins pipeline
 
 ```sh

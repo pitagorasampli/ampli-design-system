@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
 ZEROHEIGHT_TOKENS_FILENAME=zeroheight.json
-ZEROHEIGHT_TOKENS_URL=https://krotondesign.zeroheight.com/api/token_file/f0001be5cf45/share
 
 preversion_hook() {
   git fetch --all

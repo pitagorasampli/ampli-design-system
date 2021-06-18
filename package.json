@@ -1,6 +1,6 @@
 {
   "name": "@ampli/tokens",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Design System - Pitágoras Ampli.",
   "main": "build/js/index.js",
   "engines": {
@@ -13,7 +13,8 @@
     "serve:docs": "serve -n -s -l ${PORT:-4000} docs",
     "preversion": "bash scripts/preversion_hook.sh",
     "version": "bash scripts/version_hook.sh",
-    "postversion": "bash scripts/postversion_hook.sh"
+    "postversion": "bash scripts/postversion_hook.sh",
+    "download:tokens": "bash scripts/downloadtokens_hook.sh"
   },
   "author": "Dev Team @ Pitágoras Ampli",
   "license": "SEE LICENSE IN LICENSE",
