@@ -7,7 +7,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "npm run build:tokens && npm run build:assets",
+    "build": "npm run download:tokens && npm run build:tokens && npm run build:assets",
     "build:tokens": "node index.js",
     "build:assets": "bash scripts/build_assets.sh",
     "serve:docs": "serve -n -s -l ${PORT:-4000} docs",
