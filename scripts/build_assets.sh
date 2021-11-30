@@ -7,7 +7,7 @@ BUILD_ASSETS_PATH=$BUILD_PATH/assets
 BUILD_PNG_PATH=$BUILD_ASSETS_PATH/images/png
 BUILD_SVG_PATH=$BUILD_ASSETS_PATH/images/svg
 
-svgexport() {
+_svgexport() {
   image=$(basename ${1})
   size=${2}
   imageSize=${3:-''}
@@ -15,7 +15,7 @@ svgexport() {
   echo
   echo ${@}
 
-  npx svgexport \
+  svgexport \
     "${ASSETS_SVG_PATH}/${image}" \
     "${BUILD_PNG_PATH}/${image%.*}${imageSize}.png" \
     "${size}"
@@ -24,18 +24,18 @@ svgexport() {
 svg2png() {
   find ${ASSETS_SVG_PATH} -name '*.svg' | \
     while read file; do \
-      svgexport $file 2x; \
-      svgexport $file 4x @2x; \
-      svgexport $file 6x @3x; \
+      _svgexport $file 2x; \
+      _svgexport $file 4x @2x; \
+      _svgexport $file 6x @3x; \
     done
 }
 
 svg2vector() {
-  npx s2v -f ${ASSETS_SVG_PATH} -o ${VECTOR_PATH}
+  s2v -f ${ASSETS_SVG_PATH} -o ${VECTOR_PATH}
 }
 
 svgo() {
-  npx svgo -f ${ASSETS_SVG_PATH}
+  svgo -f ${ASSETS_SVG_PATH}
 }
 
 copy_svg() {

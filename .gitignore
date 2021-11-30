@@ -4,10 +4,6 @@
 !assets/
 !assets/**/*
 
-!docs/
-!docs/**/*
-!docs/**/.nojekyll
-
 !properties/
 !properties/**/*
 properties/zeroheight.json

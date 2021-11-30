@@ -14,8 +14,10 @@ update_versions() {
 
 version_hook() {
   update_versions
-  npm install
+  npm ci
   npm run build
   git add .
+  # no need to run 'git commit'
+  # 'npm version' performs 'git commit' after hook
 }
 version_hook

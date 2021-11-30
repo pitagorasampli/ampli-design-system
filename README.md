@@ -1,31 +1,26 @@
-# Design System
+# Sofia Design Tokens
 
-## Serve docs
+_**Important**: The branch `release` should never be used._
 
-```sh
-npm run serve:docs
-```
-
-_See: http://localhost:4000_
-
-## Build tokens
-Get ZeroHeight Tokens URL with product design team.
+## Get started
 
 ```sh
+npm install
 ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url> npm run build
 ```
 
-## Download tokens locally
-Get ZeroHeight Tokens URL with product design team.
+The tokens will be generated locally.
+
+_**Tip:** Link the projects to be develop with local tokens._
+
+_**Note:** Get ZeroHeight Tokens URL with product design team._
+
+
+## CI pipeline
 
 ```sh
-ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url> npm run download:tokens
-```
-
-## Jenkins pipeline
-
-```sh
+ZEROHEIGHT_TOKENS_URL=<zeroheight_tokens_url>
 npm version <version_number | major | minor | patch> -m "New release %s"
 ```
 
-_The version hook scripts will make the job._
+The version hook scripts will make the job.
