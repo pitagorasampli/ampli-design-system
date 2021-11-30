@@ -13,10 +13,6 @@
 !tokens/**/*
 !tokens/**/.*
 
-!scripts/
-!scripts/**/*
-!scripts/**/.*
-
 !.gitignore
 !build.gradle
 !Tokens_iOS.podspec
