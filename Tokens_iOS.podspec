@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Tokens'
-  s.version          = "0.0.13"
+  s.version          = "0.0.14"
   s.summary          = 'Design Tokens'
   s.description      = <<-DESC
 Design Tokens.

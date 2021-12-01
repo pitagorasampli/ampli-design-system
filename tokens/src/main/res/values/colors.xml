@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 28 Jun 2021 18:42:45 GMT
--->
+
 <resources>
-  <color name="color_blue_primary">#ff004f6b</color>
-  <color name="color_blue_light">#ff99b8c3</color>
-  <color name="color_blue_lighter">#ffd9e5e9</color>
-  <color name="color_red_primary">#ffb6494c</color>
-  <color name="color_red_light">#fff06e6e</color>
-  <color name="color_red_lighter">#fff4e4e4</color>
-  <color name="color_green_primary">#ff267c77</color>
-  <color name="color_green_light">#ff44bca8</color>
-  <color name="color_green_lighter">#ffdfeceb</color>
-  <color name="color_yellow_primary">#fffabe2c</color>
-  <color name="color_yellow_light">#fffccf61</color>
-  <color name="color_yellow_lighter">#fffff6e0</color>
-  <color name="color_orange_primary">#fff68a33</color>
-  <color name="color_orange_light">#fff9a866</color>
-  <color name="color_orange_lighter">#fffeeee1</color>
-  <color name="color_grayblue_primary">#ff7ea7c6</color>
-  <color name="color_grayblue_light">#ffcfd9e2</color>
-  <color name="color_grayblue_lighter">#ffebeff5</color>
-  <color name="color_gray_primary">#ff3e4953</color>
-  <color name="color_gray_light">#ff777f86</color>
-  <color name="color_black_20">#33000000</color>
-  <color name="color_black_75">#bf000000</color>
-  <color name="color_shadow">#33000000</color>
-  <color name="color_text_base">#ff3e4953</color>
-  <color name="color_text_secondary">#ff777f86</color>
   <color name="color_dark_neutral_color_0">#162029</color>
   <color name="color_dark_neutral_color_50">#0f161c</color>
   <color name="color_dark_neutral_color_100">#1b2631</color>

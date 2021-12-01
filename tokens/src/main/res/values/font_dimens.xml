@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Do not edit directly
-  Generated on Mon, 28 Jun 2021 18:42:45 GMT
--->
+
 <resources>
-  <dimen name="size_font_xsmall">10.00sp</dimen>
-  <dimen name="size_font_small">14.00sp</dimen>
-  <dimen name="size_font_medium">16.00sp</dimen>
-  <dimen name="size_font_large">20.00sp</dimen>
-  <dimen name="size_font_xlarge">28.00sp</dimen>
-  <dimen name="size_font_base">16.00sp</dimen>
   
 </resources>
