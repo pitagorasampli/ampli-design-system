@@ -1,6 +1,6 @@
 {
   "name": "@kroton-tech/sofia-tokens",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Sofia Design Tokens.",
   "main": "build/js/index.js",
   "engines": {
