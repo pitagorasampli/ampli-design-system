@@ -1,7 +1,7 @@
 {
   "name": "@kroton-tech/sofia-tokens",
   "version": "0.0.14",
-  "description": "Sofia Design Tokens.",
+  "description": "Sofia Design Tokens by Kroton.Tech.",
   "main": "build/js/index.js",
   "engines": {
     "node": ">=10"
@@ -17,6 +17,12 @@
   },
   "author": "Dev Team @ Kroton.Tech",
   "license": "SEE LICENSE IN LICENSE",
+  "files": [
+    "package.json",
+    "build/js/**/*",
+    "LICENSE",
+    "README.md"
+  ],
   "devDependencies": {
     "lodash": "^4.17.21",
     "style-dictionary": "^3.0.3",
