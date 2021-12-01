@@ -1,31 +1,27 @@
 {
-  "name": "@ampli/tokens",
+  "name": "@kroton-tech/sofia-tokens",
   "version": "0.0.13",
-  "description": "Design System - Pitágoras Ampli.",
+  "description": "Sofia Design Tokens.",
   "main": "build/js/index.js",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "npm run download:tokens && npm run build:tokens && npm run build:assets",
+    "get:resources": "bash scripts/get_resources.sh",
+    "build": "npm run get:resources && npm run build:tokens && npm run build:assets",
     "build:tokens": "node index.js",
     "build:assets": "bash scripts/build_assets.sh",
-    "serve:docs": "serve -n -s -l ${PORT:-4000} docs",
     "preversion": "bash scripts/preversion_hook.sh",
     "version": "bash scripts/version_hook.sh",
-    "postversion": "bash scripts/postversion_hook.sh",
-    "download:tokens": "bash scripts/downloadtokens_hook.sh"
+    "postversion": "bash scripts/postversion_hook.sh"
   },
-  "author": "Dev Team @ Pitágoras Ampli",
+  "author": "Dev Team @ Kroton.Tech",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "lodash": "^4.17.21",
-    "style-dictionary": "^2.10.3",
-    "svg2vectordrawable": "^2.6.26",
-    "svgexport": "^0.4.1",
-    "svgo": "^2.3.0"
-  },
-  "dependencies": {
-    "serve": "^11.3.2"
+    "style-dictionary": "^3.0.3",
+    "svg2vectordrawable": "^2.8.1",
+    "svgexport": "^0.4.2",
+    "svgo": "^2.8.0"
   }
 }
